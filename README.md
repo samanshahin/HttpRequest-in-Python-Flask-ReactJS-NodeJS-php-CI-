@@ -31,6 +31,10 @@ refer to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
 Better to check [this repo](https://github.com/remix-run/react-router/tree/dev/examples/data-router)
 #### -2- inner-app solution: 
 If you want to request data inner app, you should make request to "redux" or "json". I would suggest you [this repo](https://github.com/samanshahin/Redux-in-ReactJS) for ReactJS or [this repo](https://github.com/samanshahin/Redux-in-ReactNative) for React Native.
+## NodeJS
+In nodeJS, besides solutions that were mentioned under ReactJS section, we have two other options:
+One for getting data from external resource by using request npm package. You can see the sample code from [this link](https://github.com/samanshahin/HttpRequest-in-Python-Flask-ReactJS-NodeJS-php-CI-/blob/main/http-nodejs.js).
+And playing a role of RESTapi service provider, using routing solution. You can see sample code from [this link](https://github.com/samanshahin/HttpRequest-in-Python-Flask-ReactJS-NodeJS-php-CI-/blob/main/route-nodejs.js).
 ## PHP (Code Igniter)
 in php, I am using Code Igniter v3, but v4 is up now and things have just been complicated, so I will add v4 solution later...
 There's some ways of doing http request in php (code igniter):
