@@ -31,3 +31,50 @@ refer to [this link](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
 Better to check [this repo](https://github.com/remix-run/react-router/tree/dev/examples/data-router)
 #### -2- inner-app solution: 
 If you want to request data inner app, you should make request to "redux" or "json". I would suggest you [this repo](https://github.com/samanshahin/Redux-in-ReactJS) for ReactJS or [this repo](https://github.com/samanshahin/Redux-in-ReactNative) for React Native.
+## PHP (Code Igniter)
+in php, I am using Code Igniter v3, but v4 is up now and things have just been complicated, so I will add v4 solution later...
+There's some ways of doing http request in php (code igniter):
+### 1. pure php:
+You can use pure php:
+```
+<?php 
+$q = $_REQUEST['q'];
+echo $q; 
+?>
+```
+### 2. Code Igniter Framework:
+as Code Igniter uses MVC concept (Model-View-Controller) we should provide all 3 parts correctly ...
+#### for v3:
+in About.php controller:
+```
+	public function index()
+	{
+        $this->load->model('data_model');
+
+        $data['msg'] = $this->data_model->sendmsg();
+
+        $this->load->view('about', $data);
+	}
+```
+in about.php view:
+```
+<?php echo $msg; ?>
+```
+in Data_model.php model:
+```
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+class Data_model extends CI_Model
+{
+    public function sendmsg()
+    {
+        $name = 'Saman';
+        $msg = 'Have fun with CI...';
+        
+        $content = 'message from '.$name.': '.$msg;
+        return $content;
+    }
+}
+```
+#### for v4: 
+Use [this link](https://codeigniter4.github.io/userguide/incoming/incomingrequest.html#accessing-the-request) as a reference, I will update this repo later...
