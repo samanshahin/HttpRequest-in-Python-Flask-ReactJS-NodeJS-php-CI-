@@ -38,8 +38,8 @@ There's some ways of doing http request in php (code igniter):
 You can use pure php:
 ```
 <?php 
-$q = $_REQUEST['q'];
-echo $q; 
+  $q = $_REQUEST['q'];
+  echo $q; 
 ?>
 ```
 ### 2. Code Igniter Framework:
@@ -47,14 +47,12 @@ as Code Igniter uses MVC concept (Model-View-Controller) we should provide all 3
 #### for v3:
 in About.php controller:
 ```
-	public function index()
-	{
-        $this->load->model('data_model');
-
-        $data['msg'] = $this->data_model->sendmsg();
-
-        $this->load->view('about', $data);
-	}
+public function index()
+  {
+    $this->load->model('data_model');
+    $data['msg'] = $this->data_model->sendmsg();
+    $this->load->view('about', $data);
+  }
 ```
 in about.php view:
 ```
